@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    <select id="optionlist" onchange="test()">
+       <option value="1">Apple</option>
+       <option value="2">Orange</option>
+       <option value="3">Banana</option>
+       <option value="4">grapes</option>
+       <option value="5">Mango</option>
+       <option value="6">guava</option>
+    </select>
+
+    <script>
+        function test(){
+            var x = document.getElementById('optionlist');
+            var dis = document.getElementById('result');
+            var value =x.options[x.selectedIndex].text;
+            dis.innerHTML = value + ' '+ x.value
+        }
+    </script>
+</body>
+</html>
